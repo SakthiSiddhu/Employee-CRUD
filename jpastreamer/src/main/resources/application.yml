@@ -1,0 +1,24 @@
+
+server:
+  port: 8220
+spring:
+  application:
+  name: jpastreamer
+  datasource:
+    url: jdbc:mysql://localhost:3306/employees_schema  # JDBC URL for your database
+    username: root                               # Database username
+    password: pass@word1                        # Database password
+    driver-class-name: com.mysql.cj.jdbc.Driver   # JDBC driver class name
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect  # Hibernate dialect for MySQL
+    hibernate:
+      ddl-auto: update   # Auto-create/update database schema (options: none, validate, update, create, create-drop)
+    show-sql: true       # Enable SQL logging
+
+# Optional: Configure connection pool settings
+#spring.datasource.hikari.*:
+
+# Optional: Configure additional Hibernate properties
+#spring.jpa.properties.hibernate.*:
+
